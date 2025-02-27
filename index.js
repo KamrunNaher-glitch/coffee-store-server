@@ -80,11 +80,6 @@ async function run() {
       }
       const result = await coffeeCollection.updateOne(filter,coffee,options);
       res.send(result);
-
-
-
-
-
     })
 
     app.delete('/coffee/:id',async (req,res) =>{
@@ -93,11 +88,6 @@ async function run() {
       const result = await coffeeCollection.deleteOne(query);
       res.send(result);
     })
-
-    
-
-
-
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
